@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - .:/usr/share/
+    ports:
+      - "8080:80"
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      version: '3'
+
+services:
+   web:
+     image: nginx
+     hostname: nginx
+     depends_on:
+       - redis
+     ports:
+       - "8080:80"
+   redis:
+     image: redis
+     hostname: redis
+   apache:
+     image: httpd
+     hostname: apache
+     ports: 
+       - 80
+       
+       
+       
+       $docker-compose exec redis /bin/bash
+       
+       Scale it 
+       $docker-compose up -d --scale redis=4
+       
+       $docker-compose   config
+       
